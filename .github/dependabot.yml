@@ -4,12 +4,14 @@ updates:
   # Enable version updates for npm
   - package-ecosystem: "npm"
     # Look for `package.json` and `lock` files in the `root` directory
-    directory: "/"
+    directory: "/javascript"
     # Check the npm registry for updates every day (weekdays)
     schedule:
       interval: "weekly"
       day: "monday"
-      time: "12:45" # 24 hr format
+      time: "13:59" # 24 hr format
+      timezone: "America/Los_Angeles"
+    versioning-strategy: increase
     open-pull-requests-limit: 10
     groups:
       prod-dependencies:
@@ -22,3 +24,24 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    ignore:
+      # For all deps
+      - dependency-name: "*"
+        # ignore all major updates
+        update-types: ["version-update:semver-major"]
+
+# ---
+# version: 2
+# updates:
+#   - package-ecosystem: "github-actions"
+#     directory: "/"
+#     schedule:
+#       interval: "weekly"
+#   - package-ecosystem: npm
+#     directory: "/javascript"
+#     schedule:
+#       interval: "weekly"
+#   - package-ecosystem: bundler
+#     directory: "/ruby"
+#     schedule:
+#       interval: "weekly"
