@@ -10,6 +10,6 @@
   },
   "devDependencies": {
     "nock": "^13.0.1",
-    "webpack": "^4.0.0"
+    "webpack": "^5.98.0"
   }
 }
