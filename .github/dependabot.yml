@@ -8,8 +8,8 @@ updates:
     # Check the npm registry for updates every day (weekdays)
     schedule:
       interval: "weekly"
-      day: "sunday"
-      time: "12:00" # 24 hr format
+      day: "monday"
+      time: "12:45" # 24 hr format
     open-pull-requests-limit: 10
     groups:
       prod-dependencies:
