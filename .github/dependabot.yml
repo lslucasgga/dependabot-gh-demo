@@ -4,12 +4,12 @@ updates:
   # Enable version updates for npm
   - package-ecosystem: "npm"
     # Look for `package.json` and `lock` files in the `root` directory
-    directory: "/"
+    directory: "/javascript"
     # Check the npm registry for updates every day (weekdays)
     schedule:
       interval: "weekly"
       day: "monday"
-      time: "12:45" # 24 hr format
+      time: "12:56" # 24 hr format
     open-pull-requests-limit: 10
     groups:
       prod-dependencies:
